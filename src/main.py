@@ -13,7 +13,7 @@ def main() -> None:
         print("false: не передан текст с номером телефона", file=sys.stderr)
         sys.exit(1)
 
-    text = sys.argv[1]
+    text = " ".join(sys.argv[1:])
     okved_url = os.getenv("OKVED_URL")
 
     if not okved_url:
